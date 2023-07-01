@@ -1,0 +1,15 @@
+/Users/edgarbeltran/Documents/Linq/bin/Debug/net7.0/Linq
+/Users/edgarbeltran/Documents/Linq/bin/Debug/net7.0/Linq.deps.json
+/Users/edgarbeltran/Documents/Linq/bin/Debug/net7.0/Linq.runtimeconfig.json
+/Users/edgarbeltran/Documents/Linq/bin/Debug/net7.0/Linq.dll
+/Users/edgarbeltran/Documents/Linq/bin/Debug/net7.0/Linq.pdb
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.csproj.AssemblyReference.cache
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.GeneratedMSBuildEditorConfig.editorconfig
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.AssemblyInfoInputs.cache
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.AssemblyInfo.cs
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.csproj.CoreCompileInputs.cache
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.dll
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/refint/Linq.dll
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.pdb
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/Linq.genruntimeconfig.cache
+/Users/edgarbeltran/Documents/Linq/obj/Debug/net7.0/ref/Linq.dll

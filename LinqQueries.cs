@@ -25,4 +25,17 @@ public class LinqQueries
     //query method
     return from l in librosCollection where l.PublishedDate.Year > 2000 select l;
   }
+  /*Utilizando el operador All verifica que todos los elementos de la coleccion tengan un valor en el campo status*/
+
+  public bool TodosLosLibrosTienenStatus()
+  {
+    return librosCollection.All(p => p.Status != string.Empty);
+  }
+
+  /*Utilizando el operador Any verifica si alguno de los libros fue publicado en 2005*/
+
+  public bool HayLibros2005()
+  {
+    return librosCollection.Any(p => p.PublishedDate.Year == 2005);
+  }
 }

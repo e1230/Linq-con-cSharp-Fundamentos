@@ -87,4 +87,9 @@ public class LinqQueries
   {
     return librosCollection.Where(p => p.PageCount >= 0 && p.PageCount <= 500).Sum(p => p.PageCount);
   }
+  /*Utilizando el operador Average retorna el promedio de caracteres que tienen los títulos de los libros*/
+  public double PromedioCaracteresTitulos()
+  {
+    return librosCollection.Average(p => p.Title.Length);
+  }
 }

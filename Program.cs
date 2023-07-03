@@ -38,7 +38,10 @@
 // Console.WriteLine($"{libro.Title} - {libro.PublishedDate.ToShortDateString()}");
 
 //Suma de paginas libros de 0 a 500 paginas
-Console.WriteLine(queries.SumaPaginasLibrosEntre0y500());
+// Console.WriteLine(queries.SumaPaginasLibrosEntre0y500());
+
+//Promedio de caracteres de titulos de libros
+Console.WriteLine(queries.PromedioCaracteresTitulos());
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

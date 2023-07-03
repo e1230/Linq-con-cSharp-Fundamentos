@@ -47,8 +47,18 @@ public class LinqQueries
   public IEnumerable<Book> LibrosJavaOrden()
   {
     //ascendente
-    // return librosCollection.Where(p => p.Categories.Contains("Java")).OrderBy(p => p.Title);
+    return librosCollection.Where(p => p.Categories.Contains("Java")).OrderBy(p => p.Title);
     //descendente
-    return librosCollection.Where(p => p.Categories.Contains("Java")).OrderByDescending(p => p.Title);
+    // return librosCollection.Where(p => p.Categories.Contains("Java")).OrderByDescending(p => p.Title);
+  }
+  /*Utilizando el operador Take selecciona los primeros 3 libros con fecha de publicación mas reciente que esten categorizados en Java*/
+  public IEnumerable<Book> LibrosOrdenadosPorFechaJava()
+  {
+    return librosCollection.Where(p => p.Categories.Contains("Java")).OrderByDescending(p => p.PublishedDate).Take(3);
+  }
+  /*Utilizando el operador Skip selecciona el tercer y cuarto libro que tengan mas de 400 páginas*/
+  public IEnumerable<Book> TercerYCuartoLibrosMas400Pag()
+  {
+    return librosCollection.Where(p => p.PageCount > 400).Take(4).Skip(2);
   }
 }

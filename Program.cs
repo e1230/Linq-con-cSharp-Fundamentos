@@ -16,7 +16,13 @@
 // ImprimirValores(queries.LibrosPython());
 
 //Libros de java ordenados por nombre
-ImprimirValores(queries.LibrosJavaOrden());
+// ImprimirValores(queries.LibrosJavaOrden());
+
+//3 Libros mas recientes de java.
+// ImprimirValores(queries.LibrosOrdenadosPorFechaJava());
+
+//Tercer y Cuarto libro con mas de 400 paginas
+ImprimirValores(queries.TercerYCuartoLibrosMas400Pag());
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

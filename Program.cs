@@ -22,7 +22,10 @@
 // ImprimirValores(queries.LibrosOrdenadosPorFechaJava());
 
 //Tercer y Cuarto libro con mas de 400 paginas
-ImprimirValores(queries.TercerYCuartoLibrosMas400Pag());
+// ImprimirValores(queries.TercerYCuartoLibrosMas400Pag());
+
+//Tres primeros libros filtrados con Select
+ImprimirValores(queries.TresPrimerosLibrosColeccion());
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

@@ -61,4 +61,9 @@ public class LinqQueries
   {
     return librosCollection.Where(p => p.PageCount > 400).Take(4).Skip(2);
   }
+  /*Utilizando el operador SELECT selecciona el titulo y el numero de paginas de los primeros 3 libros de la coleccion*/
+  public IEnumerable<Book> TresPrimerosLibrosColeccion()
+  {
+    return librosCollection.Take(3).Select(p => new Book() { Title = p.Title, PageCount = p.PageCount });
+  }
 }

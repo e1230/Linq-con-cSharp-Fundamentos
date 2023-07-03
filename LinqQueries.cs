@@ -97,4 +97,9 @@ public class LinqQueries
   {
     return librosCollection.Where(p => p.PublishedDate.Year >= 2000).GroupBy(p => p.PublishedDate.Year);
   }
+  /*Retorna un diccionario usando LookUp que permita consultar los libros de acuerdo a la letra con la que inicia cada titulo del libro*/
+  public ILookup<char, Book> DiccionarioLibrosPorLetra()
+  {
+    return librosCollection.ToLookup(p => p.Title[0], p => p);
+  }
 }

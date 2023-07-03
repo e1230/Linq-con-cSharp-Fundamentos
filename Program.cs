@@ -44,7 +44,11 @@
 // Console.WriteLine(queries.PromedioCaracteresTitulos());
 
 //Libros publicados a partir del 2000 agrupados por año
-ImprimirGrupo(queries.LibrosDesdeAño2000AgrupadosPorAño());
+//ImprimirGrupo(queries.LibrosDesdeAño2000AgrupadosPorAño());
+
+//Diccionario de libros por letra
+var grupo = queries.DiccionarioLibrosPorLetra();
+ImprimirDiccionario(grupo, 'A');
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");
@@ -63,6 +67,22 @@ void ImprimirGrupo(IEnumerable<IGrouping<int, Book>> ListadeLibros)
     foreach (var item in grupo)
     {
       Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate.Date.ToShortDateString());
+    }
+  }
+}
+void ImprimirDiccionario(ILookup<char, Book> listBooks, char letter)
+{
+  char letterUpper = Char.ToUpper(letter);
+  if (listBooks[letterUpper].Count() == 0)
+  {
+    Console.WriteLine($"No hay libros que inicien con la letra '{letterUpper}'");
+  }
+  else
+  {
+    Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Título", "Nro. Páginas", "Fecha de Publicación");
+    foreach (var book in listBooks[letterUpper])
+    {
+      Console.WriteLine("{0, -60} {1, 15} {2, 15}", book.Title, book.PageCount, book.PublishedDate.ToShortDateString());
     }
   }
 }

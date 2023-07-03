@@ -102,4 +102,12 @@ public class LinqQueries
   {
     return librosCollection.ToLookup(p => p.Title[0], p => p);
   }
+  /*Obten una coleccion que contenga todos los libros con mas de 500 paginas y otra que contnga los libros publicados después del 2005
+  Utilizando la cláusula Join, retorna los libros que esten en ambas colecciones*/
+  public IEnumerable<Book> LibrosDespues2005ConMasDe500Pag()
+  {
+    var LibrosDespues2005 = librosCollection.Where(p => p.PublishedDate.Year > 2005);
+    var LibrosMas500Paginas = librosCollection.Where(p => p.PageCount > 500);
+    return LibrosDespues2005.Join(LibrosMas500Paginas, p => p.Title, x => x.Title, (p, x) => p);
+  }
 }

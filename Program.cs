@@ -47,8 +47,11 @@
 //ImprimirGrupo(queries.LibrosDesdeAño2000AgrupadosPorAño());
 
 //Diccionario de libros por letra
-var grupo = queries.DiccionarioLibrosPorLetra();
-ImprimirDiccionario(grupo, 'A');
+// var grupo = queries.DiccionarioLibrosPorLetra();
+// ImprimirDiccionario(grupo, 'A');
+
+//Filtracion Join
+ImprimirValores(queries.LibrosDespues2005ConMasDe500Pag());
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

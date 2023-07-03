@@ -34,8 +34,11 @@
 // Console.WriteLine(queries.MenorFecha());
 
 //Libro con fecha mas reciente
-Book libro = queries.LibroConFechaPublicacionMasReciente();
-Console.WriteLine($"{libro.Title} - {libro.PublishedDate.ToShortDateString()}");
+// Book libro = queries.LibroConFechaPublicacionMasReciente();
+// Console.WriteLine($"{libro.Title} - {libro.PublishedDate.ToShortDateString()}");
+
+//Suma de paginas libros de 0 a 500 paginas
+Console.WriteLine(queries.CantidadLibros200y500());
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Text.Json;
 using System.Linq;
@@ -70,5 +71,15 @@ public class LinqQueries
   public int CantidadLibros200y500()
   {
     return librosCollection.Where(p => p.PageCount >= 200 && p.PageCount <= 500).Count();
+  }
+  /*Utilizando el operador Min, retorna la menor fecha de publicación de la lista de libros*/
+  public DateTime MenorFecha()
+  {
+    return librosCollection.Min(p => p.PublishedDate);
+  }
+  /*Utilizando el operador MaxBy retornar el libro con publicacion mas reciente*/
+  public Book LibroConFechaPublicacionMasReciente()
+  {
+    return librosCollection.MaxBy(p => p.PublishedDate);
   }
 }

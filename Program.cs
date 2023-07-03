@@ -28,7 +28,14 @@
 // ImprimirValores(queries.TresPrimerosLibrosColeccion());
 
 //Cantidad de libros que tienen entre 300 y 500 paginas
-Console.WriteLine(queries.CantidadLibros200y500());
+// Console.WriteLine(queries.CantidadLibros200y500());
+
+//Fecha de publicacion menor de todos los libros
+// Console.WriteLine(queries.MenorFecha());
+
+//Libro con fecha mas reciente
+Book libro = queries.LibroConFechaPublicacionMasReciente();
+Console.WriteLine($"{libro.Title} - {libro.PublishedDate.ToShortDateString()}");
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

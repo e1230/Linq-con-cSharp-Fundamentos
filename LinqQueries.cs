@@ -66,4 +66,9 @@ public class LinqQueries
   {
     return librosCollection.Take(3).Select(p => new Book() { Title = p.Title, PageCount = p.PageCount });
   }
+  /*Utilizando el operador Count retorna el numero de libros que tengan entre 200 y 500 paginas*/
+  public int CantidadLibros200y500()
+  {
+    return librosCollection.Where(p => p.PageCount >= 200 && p.PageCount <= 500).Count();
+  }
 }

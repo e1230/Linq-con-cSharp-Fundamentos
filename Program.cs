@@ -25,7 +25,10 @@
 // ImprimirValores(queries.TercerYCuartoLibrosMas400Pag());
 
 //Tres primeros libros filtrados con Select
-ImprimirValores(queries.TresPrimerosLibrosColeccion());
+// ImprimirValores(queries.TresPrimerosLibrosColeccion());
+
+//Cantidad de libros que tienen entre 300 y 500 paginas
+Console.WriteLine(queries.CantidadLibros200y500());
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "# paginas", "Fecha publicacion");

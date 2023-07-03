@@ -1,5 +1,10 @@
 ﻿LinqQueries queries = new LinqQueries();
-ImprimirValores(queries.TodaLaColeccion());
+
+//imprime todos los libros
+// ImprimirValores(queries.TodaLaColeccion());
+
+//libros antes del 2000
+ImprimirValores(queries.LibrosDespues2000());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
